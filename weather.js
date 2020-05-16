@@ -82,7 +82,7 @@ function getWeatherByCity(){
     fetch(api)
         .then(function(response){
             let data = response.json();
-            console.log(data);
+            //console.log(data);
             return data;
         })
         .then(function(data){
@@ -92,16 +92,17 @@ function getWeatherByCity(){
             //weather.city = data.name;
             weather.country = data.sys.country;
             weather.humidity = data.main.humidity;
-            console.log(data.main.humidity);
+            weather.wind = data.wind.speed;
+            
             document.getElementById("temp-val").innerHTML = "Temperature: " + weather.temperature.value;
             document.getElementById("humidity").innerHTML = "Humidity: " + weather.humidity;
+            document.getElementById("description").innerHTML = "Desc: " + weather.description + " very NOICEEEE";
+            document.getElementById("wind").innerHTML = "Wind Speed: " + weather.wind;
         })
         .then(function(){
             displayWeather();
         });
 
-    console.log("asdf");
-    console.log(weather.description);
     // document.getElementById("temp-val").innerHTML = "Temperature: " + weather.temperature.value;
     // document.getElementById("humidity").innerHTML = "Humidity: " + weather.humidity;
 
