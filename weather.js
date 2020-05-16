@@ -75,9 +75,10 @@ function getWeatherByCity(){
     console.log(cityName); //testing
 
     //let api = `http://api.openweathermap.org/data/2.5/weather?q={cityName}&appid={key}`;
-    let api = `http://api.openweathermap.org/data/2.5/weather?q={cityName}&appid={key}`;
-    console.log(key);
+    let api = `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${key}`;
+    console.log(api);
 
+    var humidity;
     fetch(api)
         .then(function(response){
             let data = response.json();
@@ -90,13 +91,16 @@ function getWeatherByCity(){
             //weather.iconId = data.weather[0].icon;
             //weather.city = data.name;
             weather.country = data.sys.country;
+            weather.humidity.value = data.main.humidity;
+            console.log(data.main.humidity);
         })
         .then(function(){
             displayWeather();
         });
 
     console.log("asdf");
-    document.getElementById("temp-val").innerHTML = weather.temperature.value;
+    document.getElementById("temp-val").innerHTML = "Temperature: " + weather.temperature.value;
+    document.getElementById("humidity").innerHTML = "Humidity: " + humidity;
 
 }
 
