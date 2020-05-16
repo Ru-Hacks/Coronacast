@@ -42,6 +42,7 @@ function getWeather(latitude, longitude){
     fetch(api)
         .then(function(response){
             let data = response.json();
+            Console.log(data);
             return data;
         })
         .then(function(data){
@@ -69,8 +70,10 @@ function celsiusToFahrenheit(temperature){
     return (temperature * 9/5) + 32;
 }
 
+//document.getElementById("getWeather").addEventListener("click", getWeatherByCity);
+
 //added by krish, input city name and get info
-// function getWeatherByCity(cityName){
+// function getWeatherByCity(cityName){   
 function getWeatherByCity(){
     let cityName = document.getElementById("cityNameField").value;
     console.log(cityName); //testing
@@ -101,12 +104,31 @@ function getWeatherByCity(){
             document.getElementById("humidity").innerHTML = "Humidity: " + weather.humidity;
             document.getElementById("description").innerHTML = "Desc: " + weather.description + " very NOICEEEE";
             document.getElementById("wind").innerHTML = "Wind Speed: " + weather.wind;
+            
+            var lat1 = data.coord.lat;
+            var lon1 = data.coord.lon;
+
+            place = {lat: lat1, lng: lon1};
+            console.log(lat1 + " " + lon1);
+            //export {place};
+
+            var options = {
+                zoom: 14,
+                center: place
+            };
+
+            var map = new google.maps.Map(document.getElementById('map'), options);
+
+            var marker = new google.maps.Marker({position: place, map: map});
+            //export {map1, marker1};
+           // changeMap(map1, marker1);
         })
         .then(function(){
             displayWeather();
             //localStorage.setItem("vOneLocalStorage", humidity.value); 
             printDesc(weather);
         });
+        
 
     // document.getElementById("temp-val").innerHTML = "Temperature: " + weather.temperature.value;
     // document.getElementById("humidity").innerHTML = "Humidity: " + weather.humidity;

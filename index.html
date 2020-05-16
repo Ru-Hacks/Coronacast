@@ -1,34 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <script src="weather.js"></script>
     <script src="compute.js"></script>
+    <script src="googleMaps.js"></script>
 
     <Javascript async="false" continueOnError="false" enabled="true" timeLimit="100" 
         name="your-javascript-name">
     <DisplayName>JavaScript 1</DisplayName>
     <ResourceURL>jsc://weather.js</ResourceURL>
     <IncludeURL>jsc:/compute.js</IncludeURL>
-</Javascript>
+    <IncludeURL>jsc:/googleMaps.js</IncludeURL>
+    </Javascript>
 
-    <title>Weather</title>
+
+    <title>Coronacast</title>
+
     <!-- <link rel="stylesheet" href="font/Rimouski.css"> -->
     <!-- <link rel="stylesheet" href="style.css"> -->
-   
-</head>
-<link href="style.css" type'"text/css" rel="stylesheet">
-<body>
-    
-<div class = "container">
-        <h1>Weather</h1>
-            <!-- <label></label> -->
-            <input type="text" id="cityNameField" name="cityNameField"><br> <!--- input cityname, css is id, name for js -->
-            <!-- <input type="submit" value="poop" name="submitButton"> -->
-            <button class="getWeather", onclick="getWeatherByCity()">Get Weather</button>
-    </div>
-                            
 
+</head>
+<link href="style.css" type="text/css" rel="stylesheet">
+
+<body>
+
+    <div class="container">
+        <h1>Coronacast</h1>
+        <!-- <label></label> -->
+        <input type="text" id="cityNameField" name="cityNameField"><br>
+        <!--- input cityname, css is id, name for js -->
+        <!-- <input type="submit" value="poop" name="submitButton"> -->
+        <button class="getWeather" , onclick="getWeatherByCity()">Get Weather</button>
+        <!-- <button class="getWeather" id="getWeather">Get Weather</button> -->
+    </div>
+
+
+    <div>
+        <input type="radio" id="trafficChoice" onclick="switchTraffic()"
+            name="layerMap" value="trafficR">
+        <label for="trafficChoice">Traffic Layer</label>
+    
+        <input type="radio" id="bicycleChoice" onclick="switchBicycle()"
+            name="layerMap" value="bicycleR">
+        <label for="trafficChoice">Bicycle Layer</label>
+    
+        <input type="radio" id="clearChoice" onclick="switchClear()"
+            name="layerMap" value="clearR">
+        <label for="transitChoice">Clear Layers</label>
+
+    </div>
     <!-- <div class="container">
         <div class="app-title">
             <p>Weather</p>
@@ -50,39 +72,21 @@
         </div>
     </div> -->
     <div style="padding-left: 20px;">
-<section class = "container">
-    <div class = "containerLabels">
-            <p id="temp-val">Temp: </p>
-            <p id="humidity">Humidity: </p>
-            <p id="description">Desc: </p>
-            <p id="wind">Wind Speed: </p>
-   </div>
-        <div id="map" style="width: 50%; height: 500px;"></div>
-</section>
-        <script>
-
-            function initMap() {
-                let place = {lat: 43.6532, lng: -79.3832};
-
-                var options = {
-                    zoom: 14,
-                    center: place
-                };
-                var map = new google.maps.Map(document.getElementById('map'), options);
-
-                let marker = new google.maps.Marker({position: place, map: map});
-
-                var trafficlayer = new google.maps.TrafficLayer(); // Shows traffic (red places)
-                trafficlayer.setMap(map);
-
-            }
+          <div id="map"></div>
+            <div class="containerLabels">
+                <p id="temp-val">Temp: </p>
+                <p id="humidity">Humidity: </p>
+                <p id="description">Desc: </p>
+                <p id="wind">Wind Speed: </p>
+            </div>
+          
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDs5RMTZSTPQ7rKuju2izaChBJerfJkDvI&callback=initMap">
             </script>
-            <script async defer
-                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDs5RMTZSTPQ7rKuju2izaChBJerfJkDvI&callback=initMap">
-                </script>
-            
-            <!-- <script src="weather.js"></script> -->
 
-</div>
+        <!-- <script src="weather.js"></script> -->
+
+    </div>
 </body>
+
 </html>

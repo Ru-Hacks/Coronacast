@@ -11,7 +11,7 @@ added import*/
 body,html {
 
 
-background-color: white ;
+background-color: #97CAEF ;
 text-align: center;
 height: 100%;
 }
@@ -21,25 +21,23 @@ height: 100%;
 	
 	
 }
-
-.container {
-  width: 80%;
-  height: 200px;
-  background: aqua;
-  margin: auto;
-  padding: 10px;
-}
-/* Always set the map height explicitly to define the size of the div
- * element that contains the map. */
-.map {
+#map {
 	float: left;
         height:400px;
         width: 50%;
+	display: inline-block;
 }
 .containerLabels {
-	margin-left: 15%;
+	float: left;
+	display: inline-block;
+	padding: 15px;
 }
-.getWeather {border-radius: 8px;}
+
+.getWeather {
+	border-radius: 8px;
+	margin-bottom: 20px;
+	margin-top: 10px;
+}
 /* Optional: Makes the sample page fill the window. */
 html,
 body {
@@ -342,7 +340,7 @@ hr{
 	font-family: 'Nanum Gothic', sans-serif;
 	font-weight: 400;
 	font-size: 16pt;
-	color: #8F8F8F;
+	color: #3d3d3d;
 	text-align: justify;
 	
 }
