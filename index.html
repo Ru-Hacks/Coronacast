@@ -68,21 +68,7 @@
           
         <script>
             var map;
-            function initMap(){
-                var options = {
-                    zoom:14,
-                    center:{lat:43.6532,lng:-79.3832}
-                    }
-                // var map = new google.maps.Map(document.getElementById('map'), options);
-                 map = new google.maps.Map(document.getElementById('map'), options);
-                
-                // var trafficlayer = new google.maps.TrafficLayer(); // Shows traffic (red places)
-                // trafficlayer.setMap(map);
 
-            }
-
-            function switchTraffic(){
-              
             function initMap() {
                 let place = {lat: 43.6532, lng: -79.3832};
 
@@ -90,13 +76,15 @@
                     zoom: 14,
                     center: place
                 };
-                var map = new google.maps.Map(document.getElementById('map'), options);
+                    map = new google.maps.Map(document.getElementById('map'), options);
 
                 let marker = new google.maps.Marker({position: place, map: map});
   
-                var trafficlayer = new google.maps.TrafficLayer(); // Shows traffic (red places)
-                trafficlayer.setMap(map);
+                // var trafficlayer = new google.maps.TrafficLayer(); // Shows traffic (red places)
+                // trafficlayer.setMap(map);
             }
+
+            
 
             function switchBicycle(){
                 var bicyclelayer = new google.maps.BicyclingLayer();
