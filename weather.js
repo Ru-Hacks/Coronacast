@@ -5,9 +5,6 @@ const weather = {};
 weather.temperature = {
     unit : "celsius"
 }
-weather.humidity = {
-
-}
 
 // APP CONSTS AND VARS
 const KELVIN = 273;
