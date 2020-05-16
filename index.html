@@ -60,24 +60,27 @@
             </div>
         </div>
     </div> -->
-   <div id="map" style="width: 50%; height: 500px;"></div>
-   <script>
-	function initMap(){
-		var options = {
-			zoom:14,
-			center:{lat:43.6532,lng:-79.3832}
-			}
-        var map = new google.maps.Map(document.getElementById('map'), options);
-        
-        var trafficlayer = new google.maps.TrafficLayer(); // Shows traffic (red places)
-        trafficlayer.setMap(map);
+    <div style="padding-left: 20px;">
+        <div id="map" style="width: 50%; height: 500px;"></div>
+        <script>
+            function initMap(){
+                var options = {
+                    zoom:14,
+                    center:{lat:43.6532,lng:-79.3832}
+                    }
+                var map = new google.maps.Map(document.getElementById('map'), options);
+                
+                var trafficlayer = new google.maps.TrafficLayer(); // Shows traffic (red places)
+                trafficlayer.setMap(map);
 
-	}
-	</script>
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDs5RMTZSTPQ7rKuju2izaChBJerfJkDvI&callback=initMap">
-        </script>
-    
-    <!-- <script src="weather.js"></script> -->
+            }
+            </script>
+            <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDs5RMTZSTPQ7rKuju2izaChBJerfJkDvI&callback=initMap">
+                </script>
+            
+            <!-- <script src="weather.js"></script> -->
+
+</div>
 </body>
 </html>
