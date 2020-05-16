@@ -73,7 +73,8 @@ function celsiusToFahrenheit(temperature){
 //document.getElementById("getWeather").addEventListener("click", getWeatherByCity);
 
 //added by krish, input city name and get info
-// function getWeatherByCity(cityName){   
+// function getWeatherByCity(cityName){  
+var map; 
 function getWeatherByCity(){
     let cityName = document.getElementById("cityNameField").value;
     console.log(cityName); //testing
@@ -117,7 +118,7 @@ function getWeatherByCity(){
                 center: place
             };
 
-            var map = new google.maps.Map(document.getElementById('map'), options);
+             map = new google.maps.Map(document.getElementById('map'), options);
 
             var marker = new google.maps.Marker({position: place, map: map});
             //export {map1, marker1};
