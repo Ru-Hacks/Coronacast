@@ -81,6 +81,8 @@ function getWeatherByCity(){
     var humidity;
     fetch(api)
         .then(function(response){
+            String(response).toLowerCase().charAt(0).toUpperCase();
+
             let data = response.json();
             //console.log(data);
             return data;
