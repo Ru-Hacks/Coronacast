@@ -11,7 +11,7 @@ added import*/
 body,html {
 
 
-background-color: white ;
+background-color: #97CAEF ;
 text-align: center;
 height: 100%;
 }
@@ -21,7 +21,31 @@ height: 100%;
 	
 	
 }
+#map {
+	float: left;
+        height:400px;
+        width: 50%;
+	display: inline-block;
+}
+.containerLabels {
+	float: left;
+	display: inline-block;
+	padding: 15px;
+}
 
+.getWeather {
+	border-radius: 8px;
+	margin-bottom: 20px;
+	margin-top: 10px;
+}
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+       height: 100%;
+       margin: 0;
+       padding: 0;
+        }
+    </style>
 #rcorners2 {
 	
 
@@ -316,7 +340,7 @@ hr{
 	font-family: 'Nanum Gothic', sans-serif;
 	font-weight: 400;
 	font-size: 16pt;
-	color: #8F8F8F;
+	color: #3d3d3d;
 	text-align: justify;
 	
 }
