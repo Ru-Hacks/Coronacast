@@ -23,6 +23,20 @@
     </div>
 
 
+    <div>
+        <input type="radio" id="trafficChoice" onclick="switchTraffic()"
+            name="layerMap" value="trafficR">
+        <label for="trafficChoice">Traffic Layer</label>
+    
+        <input type="radio" id="bicycleChoice" onclick="switchBicycle()"
+            name="layerMap" value="bicycleR">
+        <label for="trafficChoice">Bicycle Layer</label>
+    
+        <input type="radio" id="clearChoice" onclick="switchClear()"
+            name="layerMap" value="clearR">
+        <label for="transitChoice">Clear Layers</label>
+
+    </div>
     <!-- <div class="container">
         <div class="app-title">
             <p>Weather</p>
@@ -53,7 +67,22 @@
             </div>
           
         <script>
+            var map;
+            function initMap(){
+                var options = {
+                    zoom:14,
+                    center:{lat:43.6532,lng:-79.3832}
+                    }
+                // var map = new google.maps.Map(document.getElementById('map'), options);
+                 map = new google.maps.Map(document.getElementById('map'), options);
+                
+                // var trafficlayer = new google.maps.TrafficLayer(); // Shows traffic (red places)
+                // trafficlayer.setMap(map);
 
+            }
+
+            function switchTraffic(){
+              
             function initMap() {
                 let place = {lat: 43.6532, lng: -79.3832};
 
@@ -64,10 +93,19 @@
                 var map = new google.maps.Map(document.getElementById('map'), options);
 
                 let marker = new google.maps.Marker({position: place, map: map});
-
+  
                 var trafficlayer = new google.maps.TrafficLayer(); // Shows traffic (red places)
                 trafficlayer.setMap(map);
+            }
 
+            function switchBicycle(){
+                var bicyclelayer = new google.maps.BicyclingLayer();
+                bicyclelayer.setMap(map);
+            }
+
+            function switchClear(){
+                var transitLayer = new google.maps.RendererLayer();
+                transitLayer.setMap(map);
             }
         </script>
         <script async defer
