@@ -23,19 +23,20 @@ function initMap() {
 //     marker = marker1;
     
 // }
-
+var trafficLayer;
+var bicyclelayer;
 function switchTraffic(){
-    var trafficLayer = new google.maps.TrafficLayer();
+    trafficLayer = new google.maps.TrafficLayer();
     trafficLayer.setMap(map);
 }
 
 
 function switchBicycle(){
-    var bicyclelayer = new google.maps.BicyclingLayer();
+    bicyclelayer = new google.maps.BicyclingLayer();
     bicyclelayer.setMap(map);
 }
 
 function switchClear(){
-    var transitLayer = new google.maps.RendererLayer();
-    transitLayer.setMap(map);
+    trafficLayer.setMap(null);
+    bicyclelayer.setMap(null);
 }
