@@ -76,7 +76,7 @@
                     zoom: 14,
                     center: place
                 };
-                    map = new google.maps.Map(document.getElementById('map'), options);
+                map = new google.maps.Map(document.getElementById('map'), options);
 
                 let marker = new google.maps.Marker({position: place, map: map});
   
@@ -84,6 +84,10 @@
                 // trafficlayer.setMap(map);
             }
 
+            function switchTraffic(){
+                var trafficLayer = new google.maps.TrafficLayer();
+                trafficLayer.setMap(map);
+            }
             
 
             function switchBicycle(){
