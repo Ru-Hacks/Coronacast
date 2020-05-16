@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <script src="weather.js"></script>
     <title>Weather</title>
     <!-- <link rel="stylesheet" href="font/Rimouski.css"> -->
     <!-- <link rel="stylesheet" href="style.css"> -->
-   
+
 </head>
-<link href="style.css" type'"text/css" rel="stylesheet">
+<link href="style.css" type="text/css" rel="stylesheet">
+
 <body>
-    
-<div class = "container">
+
+    <div class="container">
         <h1>Weather</h1>
-            <!-- <label></label> -->
-            <input type="text" id="cityNameField" name="cityNameField"><br> <!--- input cityname, css is id, name for js -->
-            <!-- <input type="submit" value="poop" name="submitButton"> -->
-            <button class="getWeather", onclick="getWeatherByCity()">Get Weather</button>
+        <!-- <label></label> -->
+        <input type="text" id="cityNameField" name="cityNameField"><br>
+        <!--- input cityname, css is id, name for js -->
+        <!-- <input type="submit" value="poop" name="submitButton"> -->
+        <button class="getWeather" , onclick="getWeatherByCity()">Get Weather</button>
     </div>
-                            
+
 
     <!-- <div class="container">
         <div class="app-title">
@@ -41,34 +44,35 @@
         </div>
     </div> -->
     <div style="padding-left: 20px;">
-<section class = "container">
-    <div class = "containerLabels">
-            <p id="temp-val">Temp: </p>
-            <p id="humidity">Humidity: </p>
-            <p id="description">Desc: </p>
-            <p id="wind">Wind Speed: </p>
-   </div>
-        <div id="map" style="width: 50%; height: 500px;"></div>
-</section>
+        <section class="container">
+            <div class="containerLabels">
+                <p id="temp-val">Temp: </p>
+                <p id="humidity">Humidity: </p>
+                <p id="description">Desc: </p>
+                <p id="wind">Wind Speed: </p>
+            </div>
+            <div id="map" style="width: 50%; height: 500px;"></div>
+        </section>
         <script>
-            function initMap(){
+            function initMap() {
                 var options = {
-                    zoom:14,
-                    center:{lat:43.6532,lng:-79.3832}
-                    }
+                    zoom: 14,
+                    center: { lat: 43.6532, lng: -79.3832 }
+                }
                 var map = new google.maps.Map(document.getElementById('map'), options);
-                
+
                 var trafficlayer = new google.maps.TrafficLayer(); // Shows traffic (red places)
                 trafficlayer.setMap(map);
 
             }
+        </script>
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDs5RMTZSTPQ7rKuju2izaChBJerfJkDvI&callback=initMap">
             </script>
-            <script async defer
-                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDs5RMTZSTPQ7rKuju2izaChBJerfJkDvI&callback=initMap">
-                </script>
-            
-            <!-- <script src="weather.js"></script> -->
 
-</div>
+        <!-- <script src="weather.js"></script> -->
+
+    </div>
 </body>
+
 </html>
