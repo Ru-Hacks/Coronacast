@@ -2,6 +2,7 @@
 // App data
 const weather = {};
 
+
 weather.temperature = {
     unit : "celsius"
 }
@@ -78,7 +79,7 @@ function getWeatherByCity(){
     let api = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${key}`;
     console.log(api);
 
-    var humidity;
+   
     fetch(api)
         .then(function(response){
             
@@ -103,6 +104,8 @@ function getWeatherByCity(){
         })
         .then(function(){
             displayWeather();
+            //localStorage.setItem("vOneLocalStorage", humidity.value); 
+            printDesc(weather);
         });
 
     // document.getElementById("temp-val").innerHTML = "Temperature: " + weather.temperature.value;
@@ -125,3 +128,4 @@ function getWeatherByCity(){
 //         weather.temperature.unit = "celsius"
 //     }
 // });
+
