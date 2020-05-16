@@ -5,6 +5,9 @@ const weather = {};
 weather.temperature = {
     unit : "celsius"
 }
+weather.humidity = {
+    
+}
 
 // APP CONSTS AND VARS
 const KELVIN = 273;
@@ -91,7 +94,7 @@ function getWeatherByCity(){
             //weather.iconId = data.weather[0].icon;
             //weather.city = data.name;
             weather.country = data.sys.country;
-            weather.humidity.value = data.main.humidity;
+            weather.humidity = data.main.humidity;
             console.log(data.main.humidity);
         })
         .then(function(){
@@ -99,6 +102,7 @@ function getWeatherByCity(){
         });
 
     console.log("asdf");
+    console.log(weather.description);
     document.getElementById("temp-val").innerHTML = "Temperature: " + weather.temperature.value;
     document.getElementById("humidity").innerHTML = "Humidity: " + humidity;
 
