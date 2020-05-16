@@ -33,7 +33,11 @@ height: 100%;
 	padding: 15px;
 }
 
-.getWeather {border-radius: 8px;}
+.getWeather {
+	border-radius: 8px;
+	margin-bottom: 20px;
+	margin-top: 10px;
+}
 /* Optional: Makes the sample page fill the window. */
 html,
 body {
