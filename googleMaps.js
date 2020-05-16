@@ -25,6 +25,8 @@ function initMap() {
 // }
 var trafficLayer;
 var bicyclelayer;
+var transitLayer;
+//added by krish:
 function switchTraffic(){
     trafficLayer = new google.maps.TrafficLayer();
     trafficLayer.setMap(map);
@@ -36,7 +38,13 @@ function switchBicycle(){
     bicyclelayer.setMap(map);
 }
 
+function switchTransit(){
+    transitLayer = new google.maps.TransitLayer();
+    transitLayer.setMap(map);
+}
+
 function switchClear(){
     trafficLayer.setMap(null);
     bicyclelayer.setMap(null);
+    transitLayer.setMap(null);
 }
