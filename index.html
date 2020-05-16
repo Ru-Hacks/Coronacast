@@ -19,12 +19,7 @@
             <button class="getWeather", onclick="getWeatherByCity()">Get Weather</button>
     </div>
                             
-<div class = "containerLabels">
-            <p id="temp-val">Temp: </p>
-            <p id="humidity">Humidity: </p>
-            <p id="description">Desc: </p>
-            <p id="wind">Wind Speed: </p>
-   </div>
+
     <!-- <div class="container">
         <div class="app-title">
             <p>Weather</p>
@@ -46,7 +41,15 @@
         </div>
     </div> -->
     <div style="padding-left: 20px;">
+<section class = "container">
+    <div class = "containerLabels">
+            <p id="temp-val">Temp: </p>
+            <p id="humidity">Humidity: </p>
+            <p id="description">Desc: </p>
+            <p id="wind">Wind Speed: </p>
+   </div>
         <div id="map" style="width: 50%; height: 500px;"></div>
+</section>
         <script>
             function initMap(){
                 var options = {
