@@ -93,6 +93,8 @@ function getWeatherByCity(){
             weather.country = data.sys.country;
             weather.humidity = data.main.humidity;
             console.log(data.main.humidity);
+            document.getElementById("temp-val").innerHTML = "Temperature: " + weather.temperature.value;
+            document.getElementById("humidity").innerHTML = "Humidity: " + weather.humidity;
         })
         .then(function(){
             displayWeather();
@@ -100,8 +102,8 @@ function getWeatherByCity(){
 
     console.log("asdf");
     console.log(weather.description);
-    document.getElementById("temp-val").innerHTML = "Temperature: " + weather.temperature.value;
-    document.getElementById("humidity").innerHTML = "Humidity: " + weather.humidity;
+    // document.getElementById("temp-val").innerHTML = "Temperature: " + weather.temperature.value;
+    // document.getElementById("humidity").innerHTML = "Humidity: " + weather.humidity;
 
 }
 
