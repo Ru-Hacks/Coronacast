@@ -6,7 +6,7 @@ weather.temperature = {
     unit : "celsius"
 }
 weather.humidity = {
-    
+
 }
 
 // APP CONSTS AND VARS
@@ -104,7 +104,7 @@ function getWeatherByCity(){
     console.log("asdf");
     console.log(weather.description);
     document.getElementById("temp-val").innerHTML = "Temperature: " + weather.temperature.value;
-    document.getElementById("humidity").innerHTML = "Humidity: " + humidity;
+    document.getElementById("humidity").innerHTML = "Humidity: " + weather.humidity;
 
 }
 
