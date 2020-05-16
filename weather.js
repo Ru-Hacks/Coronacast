@@ -75,7 +75,7 @@ function getWeatherByCity(){
     console.log(cityName); //testing
 
     //let api = `http://api.openweathermap.org/data/2.5/weather?q={cityName}&appid={key}`;
-    let api = `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${key}`;
+    let api = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${key}`;
     console.log(api);
 
     var humidity;
