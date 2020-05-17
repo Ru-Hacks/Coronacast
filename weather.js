@@ -70,34 +70,35 @@ function getWeatherByCity() {
     let api = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${key}`;
     console.log(api);
 
-    
+    //Fetches api by inputing the url    
     fetch(api)
         .then(function (response) {
 
             // if(response.statusCode == 404){
             //     console.log("AAAAAAAAAArip")
             // }
-            let data = response.json();
+            let data = response.json(); //data holds the json
             //console.log(data);
             return data;
         })
         .then(function (data) {
-            weather.temperature.value = Math.floor(data.main.temp - KELVIN);
-            weather.description = data.weather[0].description;
+            weather.temperature.value = Math.floor(data.main.temp - KELVIN);  //converts the temperature into celius
+            weather.description = data.weather[0].description; //
             //weather.iconId = data.weather[0].icon;
             //weather.city = data.name;
             weather.country = data.sys.country;
-            weather.humidity = data.main.humidity;
-            weather.wind = data.wind.speed;
+            weather.humidity = data.main.humidity; //gets huimidity 
+            weather.wind = data.wind.speed; //windspeed
 
             // document.getElementById("temp-val").innerHTML = "Temperature: " + weather.temperature.value;
             // document.getElementById("humidity").innerHTML = "Humidity: " + weather.humidity;
             // document.getElementById("description").innerHTML = "Description: " + weather.description;
             // document.getElementById("wind").innerHTML = "Wind Speed: " + weather.wind;
 
-            var lat1 = data.coord.lat;
-            var lon1 = data.coord.lon;
+            var lat1 = data.coord.lat; //gets latitude
+            var lon1 = data.coord.lon; //gets longitude
 
+            //sets place, to move the map to that lat and long
             place = { lat: lat1, lng: lon1 };
             console.log(lat1 + " " + lon1);
             //export {place};
@@ -107,19 +108,22 @@ function getWeatherByCity() {
                 center: place
             };
 
+            //creates new instance of map using that location
             map = new google.maps.Map(document.getElementById('map'), options);
 
+            //moves marker to that location
             var marker = new google.maps.Marker({ position: place, map: map });
             //export {map1, marker1};
             // changeMap(map1, marker1);
         })
         .then(function () {
-            displayWeather();
+            displayWeather(); //was testing 
             //localStorage.setItem("vOneLocalStorage", humidity.value);
-            printDesc(weather);
+            printDesc(weather); //calls printDesc, in ./compute.js/
         })
         .catch((error) => {
             window.alert("Please enter a valid city!");
+            //if city name is invalid or doesn't exist, it will send an alert to user
         });
         
 
