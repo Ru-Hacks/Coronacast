@@ -17,7 +17,7 @@
 <link href="style.css" type="text/css" rel="stylesheet">
 
 <body>
-    <div>
+    <div style= "height: 1000px;">
 
     <div class="container">
         <h1>Coronacast</h1>
@@ -73,7 +73,9 @@
         </div>
     </div> -->
     <div style="padding-left: 20px;">
-          <div id="map"></div>
+          <div id="map"><script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDs5RMTZSTPQ7rKuju2izaChBJerfJkDvI&callback=initMap">
+            </script></div>
             <div class="containerLabels">
                 <p id="temp-val">Temp: </p>
                 <p id="humidity">Humidity: </p>
@@ -81,19 +83,20 @@
                 <p id="wind">Wind Speed: </p>
             </div>
           
-        <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDs5RMTZSTPQ7rKuju2izaChBJerfJkDvI&callback=initMap">
-            </script>
+        
 
         <!-- <script src="weather.js"></script> -->
 
     </div>
-</div>
-<br>
-    <div>
-        <p id="percent"></p>
 
-    </div>
+    <div>
+        <p> The safety percentage: </p></p> <p id="percent"></p>
+ 
+     </div>
+</div>
+
+
+   
 </body>
 
 </html>
