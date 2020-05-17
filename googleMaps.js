@@ -27,24 +27,36 @@ var trafficLayer;
 var bicyclelayer;
 var transitLayer;
 //added by krish:
-function switchTraffic(){
+function switchTraffic(clicked_id){
     trafficLayer = new google.maps.TrafficLayer();
     trafficLayer.setMap(map);
+    document.getElementById(clicked_id).style.background = "black";
+    document.getElementById(clicked_id).style.color = "#97CAEF";
 }
 
 
-function switchBicycle(){
+function switchBicycle(clicked_id){
     bicyclelayer = new google.maps.BicyclingLayer();
     bicyclelayer.setMap(map);
+    document.getElementById(clicked_id).style.background = "black";
+    document.getElementById(clicked_id).style.color = "#97CAEF";
 }
 
-function switchTransit(){
+function switchTransit(clicked_id){
     transitLayer = new google.maps.TransitLayer();
     transitLayer.setMap(map);
+    document.getElementById(clicked_id).style.background = "black";
+    document.getElementById(clicked_id).style.color = "#97CAEF";
 }
 
 function switchClear(){
     trafficLayer.setMap(null);
     bicyclelayer.setMap(null);
     transitLayer.setMap(null);
+    document.getElementById("trafficChoice").style.color = "black";
+    document.getElementById("trafficChoice").style.background = "#97CAEF";
+    document.getElementById("bicycleChoice").style.color = "black";
+    document.getElementById("bicycleChoice").style.background = "#97CAEF";
+    document.getElementById("transitChoice").style.color = "black";
+    document.getElementById("transitChoice").style.background = "#97CAEF";
 }
