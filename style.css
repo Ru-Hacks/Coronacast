@@ -9,27 +9,25 @@
 added import*/
 
 body,html {
-
-
 background-color: #EFEFEF;//offwhite
 text-align: center;
 
 }
 
-#buttonChoices{
-	float: left;
+.container{
+	text-align: center;
 }
 
 #cityNameField{
-
 	width: 200px;
 	height:20px;
-
+	margin-bottom: 10px;
 }
 
 #cityAgeField{
 	width: 100px;
 	height: 20px;
+	margin-bottom: 10px;
 }
 
 
@@ -37,11 +35,11 @@ text-align: center;
 
 font-size: 30px;
 
-		
+
 }
 
 #mapMain{
-	
+
 
 }
 
@@ -54,9 +52,10 @@ font-size: 30px;
 button {
 	background-color: #73AD21; /* Green */
 	border: 2px solid;
-	color: white;
+	margin-left: 18px;
+	margin-bottom: 5px;
+	color: #EFEFEF;
 	height: 30px;
-	width: 56px;
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
@@ -66,7 +65,7 @@ button {
 .getWeather {
 	background-color: #73AD21; /* Green */
 	border: 2px solid;
-	color: white;
+	color: #EFEFEF;
 	height: 80px;
 	width: 150px;
 	text-align: center;
@@ -76,28 +75,28 @@ button {
 }
 
 .getWeather:hover{
-	
+
 	transition: 0.5s;
 	border: 2px solid #73AD21;
-	background-color:white;
+	background-color:#EFEFEF;
     color: #73AD21;
-	
-  
-	 
-	 
+
+
+
+
  }
 
 #DD, #GPS, #zombie{
 	padding-top: 30px;
-	
-	
+
+
 }
 
 #map {
 	float: left;
         height:400px;
         width: 50%;
-	
+
 	border:10px solid #000000;
 }
 
@@ -115,7 +114,7 @@ body {
 	   padding-left: 40px;
 	    padding-right: 40px;
     }
-   
+
 
 
 
@@ -124,9 +123,9 @@ body {
 margin: 0 25px;
 padding-bottom:10px;
 
-	
-    
-	
+
+
+
 }
 
 
@@ -134,9 +133,9 @@ padding-bottom:10px;
 
 
  a {
-	
+
 	color: #4F80B2;
-	
+
 }
 
 li a {
@@ -156,53 +155,53 @@ li a {
 h1{
 	font-family: 'Nanum Gothic', sans-serif;
 	text-align: center;
-	
+
 	font-weight: 400;
 	color: black;
 	font-size:50pt;
-	
-	
+
+
 }
 
 
 h2{
-	
+
 	text-align: center;
 	font-family: 'Nanum Gothic', sans-serif;
 	font-size: 30pt;
 	color: #313131;
-	
-	
+
+
 }
 
 h3{
-	
-	
+
+
 	font-family: 'Nanum Gothic', sans-serif;
 	font-size: 18pt;
 	color: #313131;
-	
+
 }
 
 hr{
-	
+
 	height:10px;
 	background-color: #575757;
 	border-color: #575757;
 }
 
   p {
-  
+
 	font-family: 'Nanum Gothic', sans-serif;
 	font-weight: 400;
 	font-size: 16pt;
 	color: #3d3d3d;
 	text-align: justify;
-	
+
 }
 
 span {
-	
+
 	font-family: 'Nanum Gothic', sans-serif;
 	font-weight: 400;
 	font-size: 16pt;
