@@ -10,11 +10,7 @@ var temp = {
 
 };
 var age = 60;
-//---------------
 
-
-
-//---------------
 
 var humidityLocal = localStorage.getItem("vOneLocalStorage");
 var description;
@@ -39,5 +35,6 @@ description = humidity.result;
 
 document.getElementById("percent").innerHTML = "23%";
 document.getElementById("description").innerHTML = "Desc: " + description;
+document.getElementById("thermImg").src = "cold.png";
 
 }
