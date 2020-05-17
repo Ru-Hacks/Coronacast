@@ -115,9 +115,9 @@ if (ageInfo === ""){
 }
     
 if (wind.value>=40){
-      document.getElementById("suggestion").innerHTML += "There is also currently high wind speeds that can have the possibility of transferring the virus more easily.";
+      document.getElementById("suggestion").innerHTML += " There is also currently high wind speeds that can have the possibility of transferring the virus more easily.";
 }else{
-      document.getElementById("suggestion").innerHTML += "The current wind speed is at a moderately safe level, chances of covid droplets being caried are reduced.";
+      document.getElementById("suggestion").innerHTML += " The current wind speed is at a moderately safe level, chances of covid droplets being caried are reduced.";
 }
 
  percent = humidityFactor*( 1- humidity.value/100) + tempFactor*(1-tempTemp/30 )
