@@ -30,33 +30,33 @@ var transitLayer;
 function switchTraffic(clicked_id){
     trafficLayer = new google.maps.TrafficLayer();
     trafficLayer.setMap(map);
-    document.getElementById(clicked_id).style.background = "black";
-    document.getElementById(clicked_id).style.color = "#97CAEF";
+    document.getElementById(clicked_id).style.background = "#EFEFEF";
+    document.getElementById(clicked_id).style.color = "#73AD21";
 }
 
 
 function switchBicycle(clicked_id){
     bicyclelayer = new google.maps.BicyclingLayer();
     bicyclelayer.setMap(map);
-    document.getElementById(clicked_id).style.background = "black";
-    document.getElementById(clicked_id).style.color = "#97CAEF";
+    document.getElementById(clicked_id).style.background = "#EFEFEF";
+    document.getElementById(clicked_id).style.color = "#73AD21";
 }
 
 function switchTransit(clicked_id){
     transitLayer = new google.maps.TransitLayer();
     transitLayer.setMap(map);
-    document.getElementById(clicked_id).style.background = "black";
-    document.getElementById(clicked_id).style.color = "#97CAEF";
+    document.getElementById(clicked_id).style.background = "#EFEFEF";
+    document.getElementById(clicked_id).style.color = "#73AD21";
 }
 
 function switchClear(){
     trafficLayer.setMap(null);
     bicyclelayer.setMap(null);
     transitLayer.setMap(null);
-    document.getElementById("trafficChoice").style.color = "black";
-    document.getElementById("trafficChoice").style.background = "#97CAEF";
-    document.getElementById("bicycleChoice").style.color = "black";
-    document.getElementById("bicycleChoice").style.background = "#97CAEF";
-    document.getElementById("transitChoice").style.color = "black";
-    document.getElementById("transitChoice").style.background = "#97CAEF";
+    document.getElementById("trafficChoice").style.color = "#EFEFEF";
+    document.getElementById("trafficChoice").style.background = "#73AD21";
+    document.getElementById("bicycleChoice").style.color = "#EFEFEF";
+    document.getElementById("bicycleChoice").style.background = "#73AD21";
+    document.getElementById("transitChoice").style.color = "#EFEFEF";
+    document.getElementById("transitChoice").style.background = "#73AD21";
 }
