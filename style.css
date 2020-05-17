@@ -32,7 +32,7 @@ font-size: 30px;
 }
 
 #mapMain{
-	padding-left: 20px;
+	
 
 }
 
@@ -44,7 +44,7 @@ font-size: 30px;
 	color: #3d3d3d;
 	text-align: justify;
 	padding-bottom: 20px;
-	padding-left: 20px;
+	
 
 }
 
@@ -94,12 +94,13 @@ font-size: 30px;
 }
 
 /* Optional: Makes the sample page fill the window. */
-html,
+
 body {
        height: 100%;
        margin: 0;
-       padding: 0;
-        }
+	   padding-left: 40px;
+	    padding-right: 40px;
+    }
    
 
 
