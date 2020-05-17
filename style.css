@@ -41,6 +41,11 @@ font-size: 30px;
 
 }
 
+#clearChoice{
+	background-color: black;
+	color: #97CAEF;
+}
+
 #radioB{
 
 	font-family: 'Nanum Gothic', sans-serif;
@@ -53,6 +58,18 @@ font-size: 30px;
 
 }
 
+button {
+	background-color: #73AD21; /* Green */
+	border: 2px solid;
+	color: white;
+	height: 80px;
+	width: 150px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 20px;
+}
+
 .getWeather {
 	background-color: #73AD21; /* Green */
 	border: 2px solid;
@@ -63,7 +80,6 @@ font-size: 30px;
 	text-decoration: none;
 	display: inline-block;
 	font-size: 20px;
-	
 }
 
 .getWeather:hover{
