@@ -25,7 +25,7 @@ height: 1500px;
 
 #immunocompromised{
 	margin-left: 10px;
-	margin-top: 3px;
+	margin-top: -3px;
 }
 
 #cityNameField{
@@ -42,11 +42,12 @@ height: 1500px;
 
 
 #infoDiv{
-	border: 5px solid black;
+	border: 10px solid black;
 	float: left;
-	margin-left: 19px;
+	margin-left: -20px;
 	font-size: 20px;
 	text-align: left;
+	width: 30%;
 }
 
 #percent{
@@ -60,34 +61,34 @@ height: 1500px;
 #ailment{
 
 	font-size: 30px;
-	
-	
+
+
 	}
 #ageF{
 
 	font-size: 30px;
-	
-	
+
+
 	}
 #windF{
 
 	font-size: 30px;
-	
-	
+
+
 	}
-	
+
 #temper{
 
 	font-size: 30px;
-	
-	
+
+
 	}
-	
+
 #humidityF{
 
 	font-size: 30px;
-	
-	
+
+
 	}
 
 #mapMain{
