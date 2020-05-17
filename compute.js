@@ -106,7 +106,7 @@ document.getElementById("windF").innerHTML = "<b>Wind:</b> "+ Math.ceil(windFact
 
 document.getElementById("percent").innerHTML = "Covid-19 Risk: " + Math.ceil(percent) +"%";
 document.getElementById("ageF").innerHTML ="<b>Age Factor out of 22.0:</b> "
-+ ageTemp +", contributing " + "<b>" + Math.ceil(ageFactor*(ageTemp/22))  +"%" + "</b>";
++ ageTemp +", contributing "+"<b>" + Math.ceil(ageFactor*(ageTemp/22))  +"%"   + " / " + ageFactor+ "%</b>";
 if(weather.temperature.value<5)
 document.getElementById("thermImg").src = "cold.png";
 else if(weather.temperature.value<15)
