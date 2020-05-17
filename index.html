@@ -6,7 +6,6 @@
     <script src="weather.js"></script>
     <script src="compute.js"></script>
     <script src="googleMaps.js"></script>
-    <script src="news.js"></script>
 
 
     <title>Coronacast</title>
@@ -18,33 +17,39 @@
 <link href="style.css" type="text/css" rel="stylesheet">
 
 <body>
+    <div>
 
     <div class="container">
         <h1>Coronacast</h1>
         <!-- <label></label> -->
-        <input type="text" id="cityNameField" name="cityNameField"><br>
-        <!--- input cityname, css is id, name for js -->
-        <!-- <input type="submit" value="poop" name="submitButton"> -->
-        <button class="getWeather" , onclick="getWeatherByCity()">Get Weather</button>
-        <!-- <button class="getWeather" id="getWeather">Get Weather</button> -->
+        <div style= "display: inline-flex; vertical-align: bottom;">
 
-        <button id="news1" onclick="getNews()">newssss</button>
+            <div id = "EnterCity" style ="padding: 10px;">
+                <p style = "text-align: center;">Enter City:</p>
+                <input type="text" id="cityNameField"  name="cityNameField">
+            </div>
+
+            <div id = "EnterAge" style ="padding: 10px;">
+                <p style = "text-align: center;">Enter Age:</p>
+                <input type="text" id="cityNameField"  name="cityNameField">
+            </div>
+        <!-- <button class="getWeather" id="getWeather">Get Weather</button> -->
+        <button class="getWeather"  onclick="getWeatherByCity()">Get Result</button>
+        </div>
     </div>
 
-
-    <div>
-        <input type="radio" id="trafficChoice" onclick="switchTraffic()" name="layerMap" value="trafficR">
+    <div id = "radioB">
+        <input type="radio" id="trafficChoice" onclick="switchTraffic()"
+            name="layerMap" value="trafficR">
         <label for="trafficChoice">Traffic Layer</label>
-
-        <input type="radio" id="bicycleChoice" onclick="switchBicycle()" name="layerMap" value="bicycleR">
+    
+        <input type="radio" id="bicycleChoice" onclick="switchBicycle()"
+            name="layerMap" value="bicycleR">
         <label for="trafficChoice">Bicycle Layer</label>
-
-        <input type="radio" id="transitChoice" onclick="switchTransit()" name="layerMap" value="transitR">
-        <label for="transitChoice">Transit Layer</label>
-
-        <input type="radio" id="clearChoice" onclick="switchClear()" name="layerMap" value="clearR">
-        <label for="clearChoice">Clear Layers</label>
-
+    
+        <input type="radio" id="clearChoice" onclick="switchClear()"
+            name="layerMap" value="clearR">
+        <label for="transitChoice">Clear Layers</label>
 
     </div>
     <!-- <div class="container">
@@ -68,21 +73,25 @@
         </div>
     </div> -->
     <div style="padding-left: 20px;">
-        <div id="map"></div>
-        <div class="containerLabels">
-            <p id="temp-val">Temp: </p>
-            <p id="humidity">Humidity: </p>
-            <p id="description">Desc: </p>
-            <p id="wind">Wind Speed: </p>
-        </div>
-
+          <div id="map"></div>
+            <div class="containerLabels">
+                <p id="temp-val">Temp: </p>
+                <p id="humidity">Humidity: </p>
+                <p id="description">Desc: </p>
+                <p id="wind">Wind Speed: </p>
+            </div>
+          
         <script async defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDs5RMTZSTPQ7rKuju2izaChBJerfJkDvI&callback=initMap">
             </script>
 
         <!-- <script src="weather.js"></script> -->
 
-        <script src="corona.js"></script>
+    </div>
+</div>
+<br>
+    <div>
+        <p id="percent"></p>
 
     </div>
 </body>
