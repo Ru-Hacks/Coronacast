@@ -4,13 +4,18 @@
 @import url(https://fonts.googleapis.com/css2?family=Lilita+One&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Lilita+One&family=Miriam+Libre:wght@400;700&display=swap);
 
+/* added by krish */
+html{
+	scroll-behavior: smooth;
+}
 /*
 
 added import*/
 
-body,html {
-background-color: #EFEFEF;//offwhite
+body {
+background-color: #EFEFEF;
 text-align: center;
+height: 1500px;
 
 }
 
@@ -18,25 +23,73 @@ text-align: center;
 	text-align: center;
 }
 
+#immunocompromised{
+	margin-left: 10px;
+	margin-top: -3px;
+}
+
 #cityNameField{
 	width: 200px;
 	height:20px;
-	margin-bottom: 10px;
+	margin-top: 5px;
 }
 
 #cityAgeField{
 	width: 100px;
 	height: 20px;
-	margin-bottom: 10px;
+	margin-top: 5px;
 }
 
+
+#infoDiv{
+	border: 10px solid black;
+	float: left;
+	margin-left: -20px;
+	font-size: 20px;
+	text-align: left;
+	width: 30%;
+}
 
 #percent{
 
-font-size: 30px;
+	font-size: 40px;
+	font-weight: bold;
 
 
 }
+
+#ailment{
+
+	font-size: 30px;
+
+
+	}
+#ageF{
+
+	font-size: 30px;
+
+
+	}
+#windF{
+
+	font-size: 30px;
+
+
+	}
+
+#temper{
+
+	font-size: 30px;
+
+
+	}
+
+#humidityF{
+
+	font-size: 30px;
+
+
+	}
 
 #mapMain{
 
@@ -93,17 +146,17 @@ button {
 }
 
 #map {
-	float: left;
+	float: right;
         height:400px;
-        width: 50%;
+        width: 100%;
 
 	border:10px solid #000000;
 }
 
-.containerLabels {
+#containerLabels {
 	float: left;
 	display: inline-block;
-	padding: 15px;
+	padding-left: 150px;
 }
 
 /* Optional: Makes the sample page fill the window. */
