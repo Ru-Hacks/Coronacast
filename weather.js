@@ -13,14 +13,6 @@ const KELVIN = 273;
 //const key = "82005d27a116c2880c8f0fcb866998a0"; //original
 const key = "3d0ceda21a165fd1635f2cae0c3a32cb";
 
-// CHECK IF BROWSER SUPPORTS GEOLOCATION
-// if('geolocation' in navigator){
-//     navigator.geolocation.getCurrentPosition(setPosition, showError);
-// }else{
-//     notificationElement.style.display = "block";
-//     notificationElement.innerHTML = "<p>Browser doesn't Support Geolocation</p>";
-// }
-
 // SET USER'S POSITION
 function setPosition(position) {
     let latitude = position.coords.latitude;
@@ -28,12 +20,6 @@ function setPosition(position) {
 
     getWeather(latitude, longitude);
 }
-
-// SHOW ERROR WHEN THERE IS AN ISSUE WITH GEOLOCATION SERVICE
-// function showError(error){
-//     notificationElement.style.display = "block";
-//     notificationElement.innerHTML = `<p> ${error.message} </p>`;
-// }
 
 // GET WEATHER FROM API PROVIDER
 function getWeather(latitude, longitude) {
@@ -143,18 +129,3 @@ function getWeatherByCity() {
     document.getElementById("suggestion").innerHTML ="";
 }
 
-// WHEN THE USER CLICKS ON THE TEMPERATURE ELEMENET
-// tempElement.addEventListener("click", function(){
-//     if(weather.temperature.value === undefined) return;
-
-//     if(weather.temperature.unit == "celsius"){
-//         let fahrenheit = celsiusToFahrenheit(weather.temperature.value);
-//         fahrenheit = Math.floor(fahrenheit);
-
-//         tempElement.innerHTML = `${fahrenheit}°<span>F</span>`;
-//         weather.temperature.unit = "fahrenheit";
-//     }else{
-//         tempElement.innerHTML = `${weather.temperature.value}°<span>C</span>`;
-//         weather.temperature.unit = "celsius"
-//     }
-// });
