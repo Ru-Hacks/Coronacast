@@ -130,7 +130,7 @@ button {
 #map {
 	float: left;
         height:400px;
-        width: 50%;
+        width: 100%;
 
 	border:10px solid #000000;
 }

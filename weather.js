@@ -104,10 +104,10 @@ function getWeatherByCity() {
             weather.humidity = data.main.humidity;
             weather.wind = data.wind.speed;
 
-            document.getElementById("temp-val").innerHTML = "Temperature: " + weather.temperature.value;
-            document.getElementById("humidity").innerHTML = "Humidity: " + weather.humidity;
-            document.getElementById("description").innerHTML = "Description: " + weather.description;
-            document.getElementById("wind").innerHTML = "Wind Speed: " + weather.wind;
+            // document.getElementById("temp-val").innerHTML = "Temperature: " + weather.temperature.value;
+            // document.getElementById("humidity").innerHTML = "Humidity: " + weather.humidity;
+            // document.getElementById("description").innerHTML = "Description: " + weather.description;
+            // document.getElementById("wind").innerHTML = "Wind Speed: " + weather.wind;
 
             var lat1 = data.coord.lat;
             var lon1 = data.coord.lon;
