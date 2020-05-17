@@ -27,7 +27,7 @@
 
                 <div id="EnterCity" style="padding: 10px;">
                     <p style="text-align: center;">Enter City:</p>
-                    <input type="text" id="cityNameField" name="cityNameField">
+                    <input type="text" id="cityNameField" name="cityNameField" placeholder="Enter a city...">
                 </div>
 
                 <div id="EnterAge" style="padding: 10px;">
@@ -39,20 +39,12 @@
             </div>
         </div>
 
-        <div id="radioB">
-            <input type="radio" id="trafficChoice" onclick="switchTraffic()" name="layerMap" value="trafficR">
-            <label for="trafficChoice">Traffic Layer</label>
-
-            <input type="radio" id="bicycleChoice" onclick="switchBicycle()" name="layerMap" value="bicycleR">
-            <label for="trafficChoice">Bicycle Layer</label>
-
-            <input type="radio" id="transitChoice" onclick="switchTransit()" name="layerMap" value="transitR">
-            <label for="transitChoice">Transit Layers</label>
-
-            <input type="radio" id="clearChoice" onclick="switchClear()" name="layerMap" value="clearR">
-            <label for="transitChoice">Clear Layers</label>
-
-        </div>
+        <div>
+        <button id = "trafficChoice" onclick="switchTraffic(this.id);"> Traffic Layer </button>
+        <button id = "bicycleChoice" onclick="switchBicycle(this.id)"> Bicycle Layer </button>
+        <button id = "transitChoice" onclick="switchTransit(this.id)"> Traffic Layer </button>
+        <button id = "clearChoice" onclick="switchClear()"> Clear Layers </button>
+    </div>
         <!-- <div class="container">
         <div class="app-title">
             <p>Weather</p>
