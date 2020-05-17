@@ -113,6 +113,12 @@ if (ageInfo === ""){
 }else {
       document.getElementById("suggestion").innerHTML += "Please try to avoid going out to public places when possible and you are more at risk to the current weather conditions. Remember to wear personal protective equipment such as face masks and gloves.";
 }
+    
+if (wind.value>=40){
+      document.getElementById("suggestion").innerHTML += "There is also currently high wind speeds that can have the possibility of transferring the virus.";
+}else{
+      document.getElementById("suggestion").innerHTML += "The current wind speed is at a moderately safe level.";
+}
 
  percent = humidityFactor*( 1- humidity.value/100) + tempFactor*(1-tempTemp/30 )
   + windFactor*(tempWind/30) + ageFactor*(ageTemp/22) + ailTemp;
