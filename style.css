@@ -23,6 +23,11 @@ height: 1500px;
 	text-align: center;
 }
 
+#immunocompromised{
+	margin-left: 10px;
+	margin-top: 3px;
+}
+
 #cityNameField{
 	width: 200px;
 	height:20px;
