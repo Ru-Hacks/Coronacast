@@ -73,15 +73,15 @@ if (ageInfo === ""){
       document.getElementById("suggestion").innerHTML += "Please try to avoid going out to public places when possible and you are more at risk to the current weather conditions. Remember to wear personal protective equipment such as face masks and gloves.";
 }
 
- percent = humidityFactor*(1- humidity.value/100) + tempFactor*(tempTemp/30 ) + windFactor*(1- tempWind/30);
+ percent = humidityFactor*( humidity.value/100) + tempFactor*(1-tempTemp/30 ) + windFactor*(tempWind/30);
 
 
 //description = "The weather is " +  weather.description + humidity.result;
 
-document.getElementById("humidityF").innerHTML = "<b>Humidity:</b> "+ Math.ceil(humidityFactor*(1- humidity.value/100)) + "% / "+ humidityFactor+"%" + " | " + "<b>"+ humidity.value + "%</b>";
-document.getElementById("temper").innerHTML = "<b>Temperature:</b> "+ Math.ceil(tempFactor*(tempTemp/30 )) + "% / "+ tempFactor+"%" + " | " + "<b>"+weather.temperature.value + "°C" + "</b>";
-document.getElementById("windF").innerHTML = "<b>Wind:</b> "+ Math.ceil(windFactor*(1- tempWind/30)) + "% / "+ windFactor+"%" + " | " + "<b>" + weather.wind +" km/h</b>";
-document.getElementById("percent").innerHTML = "Percent Confidence: " + Math.ceil(percent) +"%";
+document.getElementById("humidityF").innerHTML = "<b>Humidity:</b> "+ Math.ceil(humidityFactor*(humidity.value/100)) + "% / "+ humidityFactor+"%" + " | " + "<b>"+ humidity.value + "%</b>";
+document.getElementById("temper").innerHTML = "<b>Temperature:</b> "+ Math.ceil(tempFactor*(1-tempTemp/30 )) + "% / "+ tempFactor+"%" + " | " + "<b>"+weather.temperature.value + "°C" + "</b>";
+document.getElementById("windF").innerHTML = "<b>Wind:</b> "+ Math.ceil(windFactor*(tempWind/30)) + "% / "+ windFactor+"%" + " | " + "<b>" + weather.wind +" km/h</b>";
+document.getElementById("percent").innerHTML = "Covid-19 Risk: " + Math.ceil(percent) +"%";
 //document.getElementById("weatherQual").innerHTML = description;
 if(weather.temperature.value<5)
 document.getElementById("thermImg").src = "cold.png";
