@@ -2,13 +2,13 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, user-scalable = no">
     <script src="weather.js"></script>
     <script src="compute.js"></script>
     <script src="googleMaps.js"></script>
 
 
-    <title>Coronacast</title>
+    <title>CoronaCast</title>
 
     <!-- <link rel="stylesheet" href="font/Rimouski.css"> -->
     <!-- <link rel="stylesheet" href="style.css"> -->
@@ -18,31 +18,14 @@
 
 <body>
 
-    <div style="height: 700px;">
+    <div style="height: 2000px;">
+      <h1>CoronaCast</h1>
 
-        <div class="container">
-            <h1>Coronacast</h1>
-            <!-- <label></label> -->
-            <div style="display: inline-flex; vertical-align: bottom;">
-
-                <div id="EnterCity" style="padding: 10px;">
-                    <p style="text-align: center;">Enter City:</p>
-                    <input type="text" id="cityNameField" name="cityNameField" placeholder="Enter a city...">
-                </div>
-
-                <div id="EnterAge" style="padding: 10px;">
-                    <p style="text-align: center;">Enter Age:</p>
-                    <input type="text" id="cityAgeField" name="cityAgeField">
-                </div>
-                <!-- <button class="getWeather" id="getWeather">Get Weather</button> -->
-                <button class="getWeather" onclick="getWeatherByCity()">Get Result</button>
-            </div>
-        </div>
 
         <div id = "buttonChoices">
         <button id = "trafficChoice" onclick="switchTraffic(this.id);"> Traffic Layer </button>
         <button id = "bicycleChoice" onclick="switchBicycle(this.id)"> Bicycle Layer </button>
-        <button id = "transitChoice" onclick="switchTransit(this.id)"> Traffic Layer </button>
+        <button id = "transitChoice" onclick="switchTransit(this.id)"> Transit Layer </button>
         <button id = "clearChoice" onclick="switchClear()"> Clear Layers </button>
     </div>
         <!-- <div class="container">
@@ -66,41 +49,141 @@
         </div>
     </div> -->
         <div style="padding-left: 20px;">
-            <div id="map"></div>
-            <div class="containerLabels">
-                <p id="temp-val">Temp: </p>
-                <p id="humidity">Humidity: </p>
-                <p id="description">Desc: </p>
-                <p id="wind">Wind Speed: </p>
-
-            
-            </div>
-
-            <script async defer
+            <section id="move"></section>
+            <div id="map">
+                <script async defer
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDs5RMTZSTPQ7rKuju2izaChBJerfJkDvI&callback=initMap">
                 </script>
 
-            <!-- <script src="weather.js"></script> -->
+            </div>
+            <div class="container">
+                <!-- <label></label> -->
+                <div style="display: inline-flex; vertical-align: bottom;">
+
+                  <div id="infoDiv">
+                    <ul>
+                      <li> <span style="color: red">Red </span> means this area is highly congested currently. It is strongly recommended that you avoid this area unless absolutely necessary to reduce your chances of catching the coronavirus. </li>
+                      <li> <span style="color: #c4c441">Yellow </span> means that this area is moderately congested. It is still recommended to avoid this area, however given the proper barrier mechanisms, (gloves and a mask), you may proceed with caution. </li>
+                      <li> <span style="color: green">Green </span> means that this area is mildly congested. The chance to catch coronavirus is reduced, however is it still necessary to always wear the proper barrier mechanisms, such as gloves and a mask. </li>
+                    </ul>
+                  </div>
+                    <div id="EnterCity" style="padding: 10px;">
+                        <p style="text-align: center;margin-top:-2px;">Enter City:</p>
+                        <input type="text" id="cityNameField" name="cityNameField" placeholder="Enter a city...">
+                    </div>
+
+                    <div id="EnterAge" style="padding: 10px;">
+                        <p style="text-align: center;margin-top:-2px;">Enter Age:</p>
+                        <input type="text" id="cityAgeField" name="cityAgeField" placeholder="Enter age...">
+                    </div>
+
+                    <div id="PickImmune" style="padding: 10px;">
+                        <!-- <p style="text-align: center;">Do you currently or have you in past ever developed any immunodeficiencies:</p>
+                        <input type="radio" id="immunity" name="immunity" value="yes">
+                        <label for="male">Yes</label><br>
+                        <input type="radio" id="immunity" name="immunity" value="no">
+                        <label for="male">No</label><br> -->
+                        <p id="immunocompromised">I am immunocompromised: </p>
+                        <input type="checkbox" id="immuno" name="immuno">
+                    </div>
+                    <!-- <button class="getWeather" id="getWeather">Get Weather</button> -->
+                    <a href="#move"><button class="getWeather" onclick="getWeatherByCity()">Get Result</button></a>
+                </div>
+                <p style="margin-left:31%;margin-top: -280px; margin-bottom: 225px;"> This web application's purpose is to give analysis on whether the user is
+                  safe or not to go outside. We do this by taking the location which allows the user to track the traffic and overall
+                  congestion around their area, their age, data of any of their immune deficiencies, and weather conditions in their area. </p>
+
+            </div>
+
+            <div class="containerLabels">
+                <!-- <p id="temp-val">Temp: </p>
+                <p id="humidity">Humidity: </p>
+                <p id="description">Desc: </p>
+                <p id="wind">Wind Speed: </p> -->
+                <p id="temp-val"></p>
+                <p id="humidity"></p>
+                <p id="description"></p>
+                <p id="wind"></p>
+            </div>
+
 
         </div>
-        
-    </div>
 
 
+
+
+
+            <!-- <script src="weather.js"></script> -->
+    <!--<div id = "infoDiv" style = "padding-right: 45px;">
+        <ul>
+          <li> <span style="color: red">Red </span> means this area is highly congested currently. It is strongly recommended that you avoid this area unless absolutely necessary to reduce your chances of catching the coronavirus. </li>
+          <li> <span style="color: #c4c441">Yellow </span> means that this area is moderately congested. It is still recommended to avoid this area, however given the proper barrier mechanisms, (gloves and a mask), you may proceed with caution. </li>
+          <li> <span style="color: green">Green </span> means that this area is mildly congested. The chance to catch coronavirus is reduced, however is it still necessary to always wear the proper barrier mechanisms, such as gloves and a mask. </li>
+        </ul>
+      </div>--  >
+
+    <!-- <hr stle= "padding-top: 20px; padding-bottom: 20px;"> -->
+
+    <div style = "padding-left: 20px; padding-right: 45px;">
+
+        <div >
+
+            <p id="percent"></p>
+
+        </div>
+
+
+        <div >
+
+            <p id="ailment"></p>
+
+        </div>
+
+        <div>
+
+
+            <p id="ageF"></p>
+
+        </div>
+
+        <div>
+
+
+            <p id="humidityF"></p>
+
+        </div>
+
+        <div>
+
+
+            <p id="temper"></p>
+
+        </div>
+        <div>
+
+
+            <p id="windF"></p>
+
+        </div>
+
+        <div>
+
+
+            <p id="weatherQual"></p>
+
+        </div>
 
     <div>
-        
-        <p id="percent"></p>
-
-    </div>
-    <div>
-        <img src="" id = "thermImg"></img>
+        <img src="" id = "thermImg" style = "float:left;"></img>
 
     </div>
 
+    <p id="suggestion"> </p>
 
+    </div>
+
+</div>
 
 </body>
-<p>suggestion tingy </p>
 
 </html>
