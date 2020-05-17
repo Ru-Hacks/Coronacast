@@ -33,9 +33,11 @@ else
 humidity.result= " The humidity is ";
  humidity.prop + ". It is " + humidity.value;
 
- var humidityFactor = 50;
- var tempFactor = 30;
- var windFactor = 20;
+ var humidityFactor = 35;
+ var tempFactor = 15;
+ var windFactor = 10;
+var ageFactor = 40;
+
  var tempTemp = weather.temperature.value;
 
  var tempWind = weather.wind;
@@ -49,9 +51,28 @@ humidity.result= " The humidity is ";
  else if(weather.temperature.value >30)
  tempTemp = 30;
 
-    
 
 let ageInfo = document.getElementById("cityAgeField").value;
+
+var ageTemp = ageInfo;
+
+ if(ageInfo<=19)
+ ageTemp = 1.5;
+ else if(ageInfo<=44)
+ ageTemp = 6.5;
+ else if(ageInfo<=54)
+ ageTemp = 10.3;
+ else if(ageInfo<=64)
+ ageTemp = 10.1;
+ else if(ageInfo<=74)
+ ageTemp = 13.4;
+ else if(ageInfo<=84)
+ ageTemp = 13.6;
+ else 
+ ageTemp = 22;
+    
+
+
 
 if (humidity.value< 35){
   document.getElementById("suggestion").innerHTML += "Due to the drastically low humidity levels, ";
@@ -73,16 +94,19 @@ if (ageInfo === ""){
       document.getElementById("suggestion").innerHTML += "Please try to avoid going out to public places when possible and you are more at risk to the current weather conditions. Remember to wear personal protective equipment such as face masks and gloves.";
 }
 
- percent = humidityFactor*( humidity.value/100) + tempFactor*(1-tempTemp/30 ) + windFactor*(tempWind/30);
+ percent = humidityFactor*( 1- humidity.value/100) + tempFactor*(1-tempTemp/30 )
+  + windFactor*(tempWind/30) + ageFactor*(ageTemp/22);
 
 
-//description = "The weather is " +  weather.description + humidity.result;
+//description = "The weather is " + weather.description + humidity.result;
 
-document.getElementById("humidityF").innerHTML = "<b>Humidity:</b> "+ Math.ceil(humidityFactor*(humidity.value/100)) + "% / "+ humidityFactor+"%" + " | " + "<b>"+ humidity.value + "%</b>";
+document.getElementById("humidityF").innerHTML = "<b>Humidity:</b> "+ Math.ceil(humidityFactor*(1-humidity.value/100)) + "% / "+ humidityFactor+"%" + " | " + "<b>"+ humidity.value + "%</b>";
 document.getElementById("temper").innerHTML = "<b>Temperature:</b> "+ Math.ceil(tempFactor*(1-tempTemp/30 )) + "% / "+ tempFactor+"%" + " | " + "<b>"+weather.temperature.value + "°C" + "</b>";
 document.getElementById("windF").innerHTML = "<b>Wind:</b> "+ Math.ceil(windFactor*(tempWind/30)) + "% / "+ windFactor+"%" + " | " + "<b>" + weather.wind +" km/h</b>";
+
 document.getElementById("percent").innerHTML = "Covid-19 Risk: " + Math.ceil(percent) +"%";
-//document.getElementById("weatherQual").innerHTML = description;
+document.getElementById("ageF").innerHTML ="<b>Age Factor out of 22.0:</b> "
++ ageTemp +", contributing " + "<b>" + Math.ceil(ageFactor*(ageTemp/22))  +"%" + "</b>";
 if(weather.temperature.value<5)
 document.getElementById("thermImg").src = "cold.png";
 else if(weather.temperature.value<15)
