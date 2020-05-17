@@ -80,10 +80,10 @@ if (ageInfo >= 80){
 
 //description = "The weather is " +  weather.description + humidity.result;
 
-document.getElementById("humidityF").innerHTML = "Humidity: "+ humidityFactor*(1- humidity.value/100) + "% / "+ humidityFactor+"%";
-document.getElementById("temper").innerHTML = "Temperature: "+ tempFactor*(tempTemp/30 ) + "% / "+ tempFactor+"%";
-document.getElementById("windF").innerHTML = "Wind: "+ windFactor*(1- tempWind/30) + "% / "+ windFactor+"%";
-document.getElementById("percent").innerHTML = "Percent Confidence: " + Math.floor(percent) +"%";
+document.getElementById("humidityF").innerHTML = "Humidity: "+ Math.ceil(humidityFactor*(1- humidity.value/100)) + "% / "+ humidityFactor+"%";
+document.getElementById("temper").innerHTML = "Temperature: "+ Math.ceil(tempFactor*(tempTemp/30 )) + "% / "+ tempFactor+"%";
+document.getElementById("windF").innerHTML = "Wind: "+ Math.ceil(windFactor*(1- tempWind/30)) + "% / "+ windFactor+"%";
+document.getElementById("percent").innerHTML = "Percent Confidence: " + Math.ceil(percent) +"%";
 //document.getElementById("weatherQual").innerHTML = description;
 if(weather.temperature.value<5)
 document.getElementById("thermImg").src = "cold.png";
