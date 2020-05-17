@@ -19,44 +19,40 @@
 <body>
     <div>
 
-    <div class="container">
-        <h1>Coronacast</h1>
-        <!-- <label></label> -->
-        <div style= "display: inline-flex; vertical-align: bottom;">
+        <div class="container">
+            <h1>Coronacast</h1>
+            <!-- <label></label> -->
+            <div style="display: inline-flex; vertical-align: bottom;">
 
-            <div id = "EnterCity" style ="padding: 10px;">
-                <p style = "text-align: center;">Enter City:</p>
-                <input type="text" id="cityNameField"  name="cityNameField">
-            </div>
+                <div id="EnterCity" style="padding: 10px;">
+                    <p style="text-align: center;">Enter City:</p>
+                    <input type="text" id="cityNameField" name="cityNameField">
+                </div>
 
-            <div id = "EnterAge" style ="padding: 10px;">
-                <p style = "text-align: center;">Enter Age:</p>
-                <input type="text" id="cityNameField"  name="cityNameField">
+                <div id="EnterAge" style="padding: 10px;">
+                    <p style="text-align: center;">Enter Age:</p>
+                    <input type="text" id="cityAgeField" name="cityAgeField">
+                </div>
+                <!-- <button class="getWeather" id="getWeather">Get Weather</button> -->
+                <button class="getWeather" onclick="getWeatherByCity()">Get Result</button>
             </div>
-        <!-- <button class="getWeather" id="getWeather">Get Weather</button> -->
-        <button class="getWeather"  onclick="getWeatherByCity()">Get Result</button>
         </div>
-    </div>
 
-    <div id = "radioB">
-        <input type="radio" id="trafficChoice" onclick="switchTraffic()"
-            name="layerMap" value="trafficR">
-        <label for="trafficChoice">Traffic Layer</label>
-    
-        <input type="radio" id="bicycleChoice" onclick="switchBicycle()"
-            name="layerMap" value="bicycleR">
-        <label for="trafficChoice">Bicycle Layer</label>
-    
-        <input type="radio" id="transitChoice" onclick="switchTransit()"
-            name="layerMap" value="transitR">
-        <label for="transitChoice">Transit Layers</label>
+        <div id="radioB">
+            <input type="radio" id="trafficChoice" onclick="switchTraffic()" name="layerMap" value="trafficR">
+            <label for="trafficChoice">Traffic Layer</label>
 
-        <input type="radio" id="clearChoice" onclick="switchClear()"
-            name="layerMap" value="clearR">
-        <label for="transitChoice">Clear Layers</label>
+            <input type="radio" id="bicycleChoice" onclick="switchBicycle()" name="layerMap" value="bicycleR">
+            <label for="trafficChoice">Bicycle Layer</label>
 
-    </div>
-    <!-- <div class="container">
+            <input type="radio" id="transitChoice" onclick="switchTransit()" name="layerMap" value="transitR">
+            <label for="transitChoice">Transit Layers</label>
+
+            <input type="radio" id="clearChoice" onclick="switchClear()" name="layerMap" value="clearR">
+            <label for="transitChoice">Clear Layers</label>
+
+        </div>
+        <!-- <div class="container">
         <div class="app-title">
             <p>Weather</p>
         </div>
@@ -76,8 +72,8 @@
             </div>
         </div>
     </div> -->
-    <div style="padding-left: 20px;">
-          <div id="map"></div>
+        <div style="padding-left: 20px;">
+            <div id="map"></div>
             <div class="containerLabels">
                 <p id="temp-val">Temp: </p>
                 <p id="humidity">Humidity: </p>
@@ -86,20 +82,22 @@
 
                 <div>
                     <p id="percent"></p>
-            
+
                 </div>
             </div>
-          
-        <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDs5RMTZSTPQ7rKuju2izaChBJerfJkDvI&callback=initMap">
-            </script>
 
-        <!-- <script src="weather.js"></script> -->
-       
+            <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDs5RMTZSTPQ7rKuju2izaChBJerfJkDvI&callback=initMap">
+                </script>
+
+            <!-- <script src="weather.js"></script> -->
+
+        </div>
     </div>
-</div>
-<br>
+
+    <br>
 
 </body>
+<p>suggestion tingy </p>
 
 </html>
