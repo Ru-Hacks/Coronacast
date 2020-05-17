@@ -128,7 +128,7 @@ button {
 }
 
 #map {
-	float: left;
+	float: right;
         height:400px;
         width: 100%;
 
