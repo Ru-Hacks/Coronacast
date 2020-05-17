@@ -29,11 +29,14 @@ else
 
 
 //Check if immunocompromised
+var isChecked = 0;
 if(document.getElementById('immuno').checked){
     console.log("comprimoseided");
-} else 
+    isChecked= 1;
+} else {
     console.log("not compriomsieied");
-
+    isChecked = 0;
+}
 
 humidity.result= " The humidity is ";
  humidity.prop + ". It is " + humidity.value;
@@ -127,10 +130,10 @@ else
 document.getElementById("thermImg").src = "hot.png";
 
 var ailString= "No.";
-if(isChecked)
-ailString = "Yes."
+if(isChecked ==1)
+ailString = "Yes.";
 
 document.getElementById("ailment").innerHTML = "<b>Immunocompromised:</b> "+ ailString +
- ". Contributes: <b>" + ailTemp +"%</b>" ;
+ " Contributes: <b>" + ailTemp +"%</b>" ;
 
 }
