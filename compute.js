@@ -37,5 +37,13 @@ description = humidity.result;
 document.getElementById("percent").innerHTML = "Percent Confidence: " + percent;
 document.getElementById("description").innerHTML = "Desc: " + description;
 document.getElementById("thermImg").src = "cold.png";
+    
+    if (humidity.prop.localeCompare("low")){
+  document.getElementById("suggestion").innerHTML += "Due to the drastically low humidity levels, it is not advised to go outside at this time.";
+} else if (humidity.prop.localeCompare("med")){
+    document.getElementById("suggestion").innerHTML += "The humidity levels are at a moderately safe level. Please take precaution.";
+}else if (humidity.prop.localeCompare("high")){
+    document.getElementById("suggestion").innerHTML += "Due to the drastically high humidity levels, it is not advised to go outside at this time.";
+}
 
 }
