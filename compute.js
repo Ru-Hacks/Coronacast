@@ -49,10 +49,6 @@ humidity.result= " The humidity is ";
  else if(weather.temperature.value >30)
  tempTemp = 30;
 
-
-document.getElementById("percent").innerHTML = "Percent Confidence: " + percent;
-//document.getElementById("description").innerHTML = "Desc: " + description;
-document.getElementById("thermImg").src = "cold.png";
     
 
 let ageInfo = document.getElementById("cityAgeField").value;
@@ -80,9 +76,9 @@ if (ageInfo >= 80){
 
 //description = "The weather is " +  weather.description + humidity.result;
 
-document.getElementById("humidityF").innerHTML = "Humidity: "+ Math.ceil(humidityFactor*(1- humidity.value/100)) + "% / "+ humidityFactor+"%" + " | " + humidity.value;
-document.getElementById("temper").innerHTML = "Temperature: "+ Math.ceil(tempFactor*(tempTemp/30 )) + "% / "+ tempFactor+"%" + " | " + weather.temperature.value + "°C";
-document.getElementById("windF").innerHTML = "Wind: "+ Math.ceil(windFactor*(1- tempWind/30)) + "% / "+ windFactor+"%" + " | " + weather.wind;
+document.getElementById("humidityF").innerHTML = "<b>Humidity:</b> "+ Math.ceil(humidityFactor*(1- humidity.value/100)) + "% / "+ humidityFactor+"%" + " | " + "<b>"+ humidity.value + "%</b>";
+document.getElementById("temper").innerHTML = "<b>Temperature:</b> "+ Math.ceil(tempFactor*(tempTemp/30 )) + "% / "+ tempFactor+"%" + " | " + "<b>"+weather.temperature.value + "°C" + "</b>";
+document.getElementById("windF").innerHTML = "<b>Wind:</b> "+ Math.ceil(windFactor*(1- tempWind/30)) + "% / "+ windFactor+"%" + " | " + "<b>" + weather.wind +" km/h</b>";
 document.getElementById("percent").innerHTML = "Percent Confidence: " + Math.ceil(percent) +"%";
 //document.getElementById("weatherQual").innerHTML = description;
 if(weather.temperature.value<5)
