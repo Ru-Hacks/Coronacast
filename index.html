@@ -18,7 +18,7 @@
 
 <body>
 
-    <div style="height: 700px;">
+    <div style="height: 2000px;">
 
         <div class="container">
             <h1>Coronacast</h1>
@@ -66,7 +66,13 @@
         </div>
     </div> -->
         <div style="padding-left: 20px;">
-            <div id="map"></div>
+            <div id="map">
+                <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDs5RMTZSTPQ7rKuju2izaChBJerfJkDvI&callback=initMap">
+                </script>
+
+            </div>
+
             <div class="containerLabels">
                 <p id="temp-val">Temp: </p>
                 <p id="humidity">Humidity: </p>
@@ -76,10 +82,8 @@
 
             </div>
 
-            <script async defer
-                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDs5RMTZSTPQ7rKuju2izaChBJerfJkDvI&callback=initMap">
-                </script>
-            </div>
+            
+        </div>
 
            
 
@@ -87,30 +91,34 @@
 
             <!-- <script src="weather.js"></script> -->
 
-        </div>
+        
 
-    </div>
+    
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-        <div style = " max-width: 300px;">
+    <hr stle= "padding-top: 20px; padding-bottom: 20px;">
+        <div>
         
             <p id="percent"></p>
     
         </div>
         
-    </div>
+    
 
 
-    <div>
+    
 
         <p id="percent"></p>
 
     
     <div>
-        <img src="" id = "thermImg"></img>
+        <img src="" id = "thermImg" style = "float:left;"></img>
 
     </div>
 
+    
 
+</div>
 
 </body>
 

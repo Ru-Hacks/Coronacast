@@ -104,7 +104,7 @@ button {
 #containerLabels {
 	float: left;
 	display: inline-block;
-	padding: 15px;
+	padding-left: 150px;
 }
 
 /* Optional: Makes the sample page fill the window. */

@@ -15,6 +15,7 @@ var age = 60;
 var humidityLocal = localStorage.getItem("vOneLocalStorage");
 var description;
 var result;
+var percent = 23;
 
 humidity.value = weather.humidity;
 temp.value = weather.temperature.value;
@@ -33,7 +34,7 @@ humidity.result= "The weather is " +  weather.description + ". The humidity is "
 
 description = humidity.result;
 
-document.getElementById("percent").innerHTML = "23%";
+document.getElementById("percent").innerHTML = "Percent Confidence: " + percent;
 document.getElementById("description").innerHTML = "Desc: " + description;
 document.getElementById("thermImg").src = "cold.png";
 
