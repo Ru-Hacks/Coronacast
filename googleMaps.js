@@ -14,8 +14,8 @@ function initMap() {
 
     marker = new google.maps.Marker({position: place, map: map});
 
-    // var trafficlayer = new google.maps.TrafficLayer(); // Shows traffic (red places)
-    // trafficlayer.setMap(map);
+    trafficlayer = new google.maps.TrafficLayer(); // Shows traffic (red places)
+    trafficlayer.setMap(map);
 }
 
 // function changeMap(map1, marker1){
