@@ -61,7 +61,9 @@ if (humidity.value< 35){
     document.getElementById("suggestion").innerHTML += "Due to the drastically high humidity levels, ";
 }
 
-if (ageInfo >= 80){
+if (ageInfo === ""){
+  window.alert("Please enter an age!");
+}else if (ageInfo >= 80){
     document.getElementById("suggestion").innerHTML += "Please try to avoid going out to public places unless it is an emergency.";
 }else if (ageInfo>=60){
       document.getElementById("suggestion").innerHTML += "Please try to avoid going out to public places unless absolutely necessary.";
