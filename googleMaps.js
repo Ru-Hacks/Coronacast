@@ -21,7 +21,7 @@ function initMap() {
 // function changeMap(map1, marker1){
 //     map = map1;
 //     marker = marker1;
-    
+
 // }
 var trafficLayer;
 var bicyclelayer;
