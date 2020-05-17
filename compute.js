@@ -50,9 +50,9 @@ humidity.result= " The humidity is ";
  tempTemp = 30;
 
 
-document.getElementById("percent").innerHTML = "Percent Confidence: " + percent;
-document.getElementById("description").innerHTML = "Desc: " + description;
-document.getElementById("thermImg").src = "cold.png";
+
+//document.getElementById("description").innerHTML = "Desc: " + description;
+
     
 
 let ageInfo = document.getElementById("cityAgeField").value;
