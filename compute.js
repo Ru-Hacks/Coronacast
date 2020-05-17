@@ -27,12 +27,28 @@ else if(humidity.value<66)
 else
     humidity.prop = "high";
 
+    
 
-humidity.result= "The weather is " +  weather.description + ". The humidity is " +
+
+humidity.result= " The humidity is ";
  humidity.prop + ". It is " + humidity.value;
 
+ var humidityFactor = 50;
+ var tempFactor = 30;
+ var windFactor = 20;
+ var tempTemp = weather.temperature.value;
 
-description = humidity.result;
+ var tempWind = weather.wind;
+
+ if(weather.wind>30)
+    tempWind = 30;
+    
+
+ if(weather.temperature.value <0)
+ tempTemp = 0;
+ else if(weather.temperature.value >30)
+ tempTemp = 30;
+
 
 document.getElementById("percent").innerHTML = "Percent Confidence: " + percent;
 document.getElementById("description").innerHTML = "Desc: " + description;
@@ -59,4 +75,20 @@ if (ageInfo >= 80){
       document.getElementById("suggestion").innerHTML += "Please try to avoid going out to public places when possible and you are more at risk to the current weather conditions. Remember to wear personal protective equipment such as face masks and gloves.";
 }
 
+ percent = humidityFactor*(1- humidity.value/100) + tempFactor*(tempTemp/30 ) + windFactor*(1- tempWind/30);
+
+
+//description = "The weather is " +  weather.description + humidity.result;
+
+document.getElementById("humidityF").innerHTML = "Humidity: "+ humidityFactor*(1- humidity.value/100) + "% / "+ humidityFactor+"%";
+document.getElementById("temper").innerHTML = "Temperature: "+ tempFactor*(tempTemp/30 ) + "% / "+ tempFactor+"%";
+document.getElementById("windF").innerHTML = "Wind: "+ windFactor*(1- tempWind/30) + "% / "+ windFactor+"%";
+document.getElementById("percent").innerHTML = "Percent Confidence: " + Math.floor(percent) +"%";
+//document.getElementById("weatherQual").innerHTML = description;
+if(weather.temperature.value<5)
+document.getElementById("thermImg").src = "cold.png";
+else if(weather.temperature.value<15)
+document.getElementById("thermImg").src = "green.png";
+else
+document.getElementById("thermImg").src = "hot.png";
 }
