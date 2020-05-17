@@ -57,9 +57,9 @@ document.getElementById("thermImg").src = "cold.png";
 
 let ageInfo = document.getElementById("cityAgeField").value;
 
-if (humidity.value< 33){
+if (humidity.value< 35){
   document.getElementById("suggestion").innerHTML += "Due to the drastically low humidity levels, ";
-} else if (humidity.value<66){
+} else if (humidity.value<=55){
     document.getElementById("suggestion").innerHTML += "The humidity levels are at a moderately safe level. ";
 }else {
     document.getElementById("suggestion").innerHTML += "Due to the drastically high humidity levels, ";
