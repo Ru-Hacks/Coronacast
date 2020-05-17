@@ -73,7 +73,7 @@ function celsiusToFahrenheit(temperature) {
 //document.getElementById("getWeather").addEventListener("click", getWeatherByCity);
 
 //added by krish, input city name and get info
-// function getWeatherByCity(cityName){  
+// function getWeatherByCity(cityName){
 var map;
 function getWeatherByCity() {
 
@@ -127,7 +127,7 @@ function getWeatherByCity() {
         })
         .then(function () {
             displayWeather();
-            //localStorage.setItem("vOneLocalStorage", humidity.value); 
+            //localStorage.setItem("vOneLocalStorage", humidity.value);
             printDesc(weather);
         });
 
@@ -153,4 +153,3 @@ function getWeatherByCity() {
 //         weather.temperature.unit = "celsius"
 //     }
 // });
-
