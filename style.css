@@ -23,6 +23,11 @@ text-align: center;
 
 }
 
+#cityAgeField{
+	width: 100px;
+	height: 20px;
+}
+
 
 #percent{
 
@@ -66,7 +71,7 @@ font-size: 30px;
 	transition: 0.5s;
 	border: 2px solid #73AD21;
 	background-color:white;
-   color: #73AD21;
+    color: #73AD21;
 	
   
 	 
