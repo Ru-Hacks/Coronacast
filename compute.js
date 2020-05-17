@@ -34,9 +34,9 @@ else
 humidity.result= "The weather is " +  weather.description + ". The humidity is " +
  humidity.prop + ". It is " + humidity.value;
 
- temp.result = "The temperature "
+ temp.result = "The temperature is  " + temp.value;
 
-description = humidity.result;
+description = humidity.result + temp.result;
 percent =23;
     
 document.getElementById("percent").innerHTML = "Recommendation Percent: " + percent + "%";
