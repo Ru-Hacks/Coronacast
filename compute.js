@@ -33,10 +33,11 @@ else
 humidity.result= " The humidity is ";
  humidity.prop + ". It is " + humidity.value;
 
- var humidityFactor = 35;
- var tempFactor = 15;
- var windFactor = 10;
-var ageFactor = 40;
+ var humidityFactor = 15;
+ var tempFactor = 10;
+ var windFactor = 5;
+var ageFactor = 30;
+var ailmentFactor = 40;
 
  var tempTemp = weather.temperature.value;
 
@@ -70,6 +71,12 @@ var ageTemp = ageInfo;
  ageTemp = 13.6;
  else 
  ageTemp = 22;
+
+var ailTemp = 0;
+
+ if(isChecked)
+ ailTemp = ailmentfactor;
+
     
 
 
@@ -95,7 +102,7 @@ if (ageInfo === ""){
 }
 
  percent = humidityFactor*( 1- humidity.value/100) + tempFactor*(1-tempTemp/30 )
-  + windFactor*(tempWind/30) + ageFactor*(ageTemp/22);
+  + windFactor*(tempWind/30) + ageFactor*(ageTemp/22) + ailTemp;
 
 
 //description = "The weather is " + weather.description + humidity.result;
@@ -113,4 +120,12 @@ else if(weather.temperature.value<15)
 document.getElementById("thermImg").src = "green.png";
 else
 document.getElementById("thermImg").src = "hot.png";
+
+var ailString= "No.";
+if(isChecked)
+ailString = "Yes."
+
+document.getElementById("ailment").innerHTML = "<b>Immunocompromised:</b> "+ ailString +
+ ". Contributes: <b>" + ailTemp +"%</b>" ;
+
 }
