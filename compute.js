@@ -50,6 +50,30 @@ humidity.result= " The humidity is ";
  tempTemp = 30;
 
 
+document.getElementById("percent").innerHTML = "Percent Confidence: " + percent;
+document.getElementById("description").innerHTML = "Desc: " + description;
+document.getElementById("thermImg").src = "cold.png";
+    
+
+let ageInfo = document.getElementById("cityAgeField").value;
+
+if (humidity.prop.localeCompare("low")){
+  document.getElementById("suggestion").innerHTML += "Due to the drastically low humidity levels, ";
+} else if (humidity.prop.localeCompare("med")){
+    document.getElementById("suggestion").innerHTML += "The humidity levels are at a moderately safe level. ";
+}else if (humidity.prop.localeCompare("high")){
+    document.getElementById("suggestion").innerHTML += "Due to the drastically high humidity levels, ";
+}
+
+if (ageInfo >= 80){
+    document.getElementById("suggestion").innerHTML += "Please try to avoid going out to public places unless it is an emergency.";
+}else if (ageInfo>=60){
+      document.getElementById("suggestion").innerHTML += "Please try to avoid going out to public places unless absolutely necessary.";
+}else if (ageInfo < 60 && humidity.prop.localeCompare("med")){
+      document.getElementById("suggestion").innerHTML += "Please try to avoid going out to public places when possible. Remember to wear personal protective equipment such as face masks and gloves.";
+}else {
+      document.getElementById("suggestion").innerHTML += "Please try to avoid going out to public places when possible and you are more at risk to the current weather conditions. Remember to wear personal protective equipment such as face masks and gloves.";
+}
 
  percent = humidityFactor*(1- humidity.value/100) + tempFactor*(tempTemp/30 ) + windFactor*(1- tempWind/30);
 

@@ -84,11 +84,13 @@ function getWeatherByCity() {
     let api = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${key}`;
     console.log(api);
 
-
+    
     fetch(api)
         .then(function (response) {
 
-
+            // if(response.statusCode == 404){
+            //     console.log("AAAAAAAAAArip")
+            // }
             let data = response.json();
             //console.log(data);
             return data;
@@ -129,13 +131,15 @@ function getWeatherByCity() {
             displayWeather();
             //localStorage.setItem("vOneLocalStorage", humidity.value);
             printDesc(weather);
+        })
+        .catch((error) => {
+            window.alert("Please enter a valid city!");
         });
-
+        
 
     // document.getElementById("temp-val").innerHTML = "Temperature: " + weather.temperature.value;
     // document.getElementById("humidity").innerHTML = "Humidity: " + weather.humidity;
     document.getElementById("cityNameField").value = "";
-    document.getElementById("cityAgeField").value = "";
 }
 
 // WHEN THE USER CLICKS ON THE TEMPERATURE ELEMENET
