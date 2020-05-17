@@ -140,6 +140,7 @@ function getWeatherByCity() {
     // document.getElementById("temp-val").innerHTML = "Temperature: " + weather.temperature.value;
     // document.getElementById("humidity").innerHTML = "Humidity: " + weather.humidity;
     document.getElementById("cityNameField").value = "";
+    document.getElementById("suggestion").innerHTML ="";
 }
 
 // WHEN THE USER CLICKS ON THE TEMPERATURE ELEMENET
