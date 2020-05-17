@@ -8,9 +8,10 @@
 
 added import*/
 
-body,html {
-background-color: #EFEFEF;//offwhite
+body {
+background-color: #EFEFEF;
 text-align: center;
+height: 1500px;
 
 }
 
@@ -100,7 +101,7 @@ button {
 	border:10px solid #000000;
 }
 
-.containerLabels {
+#containerLabels {
 	float: left;
 	display: inline-block;
 	padding: 15px;

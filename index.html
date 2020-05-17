@@ -66,33 +66,39 @@
         </div>
     </div> -->
         <div style="padding-left: 20px;">
-            <div id="map"></div>
-            <div class="containerLabels">
-                <p id="temp-val">Temp: </p>
-                <p id="humidity">Humidity: </p>
-                <p id="description">Desc: </p>
-                <p id="wind">Wind Speed: </p>
-
-            
-            </div>
-
-            <script async defer
+            <div id="map">
+                <script async defer
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDs5RMTZSTPQ7rKuju2izaChBJerfJkDvI&callback=initMap">
                 </script>
+            </div>
+
+           
+
+            
 
             <!-- <script src="weather.js"></script> -->
 
+        </div>
+        <div id="containerLabels">
+            <p id="temp-val">Temp: </p>
+            <p id="humidity">Humidity: </p>
+            <p id="description">Desc: </p>
+            <p id="wind">Wind Speed: </p>
+
+        
+        </div>
+
+        <div style = " max-width: 300px;">
+        
+            <p id="percent"></p>
+    
         </div>
         
     </div>
 
 
 
-    <div>
-        
-        <p id="percent"></p>
-
-    </div>
+    
     <div>
         <img src="" id = "thermImg"></img>
 
@@ -101,6 +107,6 @@
 
 
 </body>
-<p>suggestion tingy </p>
+
 
 </html>
