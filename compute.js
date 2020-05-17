@@ -83,7 +83,7 @@ var ageTemp = ageInfo;
 var ailTemp = 0;
 
  if(isChecked)
- ailTemp = ailmentfactor;
+ ailTemp = ailmentFactor;
 
     
 
