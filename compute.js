@@ -27,7 +27,12 @@ else if(humidity.value<66)
 else
     humidity.prop = "high";
 
-    
+
+//Check if immunocompromised
+if(document.getElementById('immuno').checked){
+    console.log("comprimoseided");
+} else 
+    console.log("not compriomsieied");
 
 
 humidity.result= " The humidity is ";
