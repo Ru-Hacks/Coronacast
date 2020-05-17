@@ -57,11 +57,11 @@ document.getElementById("thermImg").src = "cold.png";
 
 let ageInfo = document.getElementById("cityAgeField").value;
 
-if (humidity.prop.localeCompare("low")){
+if (humidity.value< 33){
   document.getElementById("suggestion").innerHTML += "Due to the drastically low humidity levels, ";
-} else if (humidity.prop.localeCompare("med")){
+} else if (humidity.value<66){
     document.getElementById("suggestion").innerHTML += "The humidity levels are at a moderately safe level. ";
-}else if (humidity.prop.localeCompare("high")){
+}else {
     document.getElementById("suggestion").innerHTML += "Due to the drastically high humidity levels, ";
 }
 
