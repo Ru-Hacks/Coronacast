@@ -36,9 +36,10 @@
                 </div>
                 <!-- <button class="getWeather" id="getWeather">Get Weather</button> -->
                 <button class="getWeather" onclick="getWeatherByCity()">Get Result</button>
-            </div>
+            </div>  
         </div>
 
+<<<<<<< Updated upstream
         <div id="radioB">
             <input type="radio" id="trafficChoice" onclick="switchTraffic()" name="layerMap" value="trafficR">
             <label for="trafficChoice">Traffic Layer</label>
@@ -52,6 +53,13 @@
             <input type="radio" id="clearChoice" onclick="switchClear()" name="layerMap" value="clearR">
             <label for="transitChoice">Clear Layers</label>
 
+=======
+        <div id = "buttonChoices">
+            <button id = "trafficChoice" onclick="switchTraffic(this.id);"> Traffic Layer </button>
+            <button id = "bicycleChoice" onclick="switchBicycle(this.id)"> Bicycle Layer </button>
+            <button id = "transitChoice" onclick="switchTransit(this.id)"> Traffic Layer </button>
+            <button id = "clearChoice" onclick="switchClear()"> Clear Layers </button>
+>>>>>>> Stashed changes
         </div>
         <!-- <div class="container">
         <div class="app-title">
@@ -75,23 +83,21 @@
     </div> -->
         <div style="padding-left: 20px;">
             <div id="map"></div>
-            <div class="containerLabels">
+            <div id="containerLabels">
                 <p id="temp-val">Temp: </p>
                 <p id="humidity">Humidity: </p>
                 <p id="description">Desc: </p>
                 <p id="wind">Wind Speed: </p>
-
-            
             </div>
-
             <script async defer
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDs5RMTZSTPQ7rKuju2izaChBJerfJkDvI&callback=initMap">
-                </script>
+            </script>
 
             <!-- <script src="weather.js"></script> -->
 
         </div>
         
+<<<<<<< Updated upstream
     </div>
 
 
@@ -101,6 +107,16 @@
         <p id="percent"></p>
 
     </div>
+=======
+        
+    </div>
+    <div> 
+        <p id="percent"></p>
+        <img src="" id = "thermImg"></img>
+
+    </div>
+    
+>>>>>>> Stashed changes
 
 
 
