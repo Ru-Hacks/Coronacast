@@ -33,20 +33,16 @@
 
 
     <div>
-        <input type="radio" id="trafficChoice" onclick="switchTraffic()"
-            name="layerMap" value="trafficR">
+        <input type="radio" id="trafficChoice" onclick="switchTraffic()" name="layerMap" value="trafficR">
         <label for="trafficChoice">Traffic Layer</label>
-    
-        <input type="radio" id="bicycleChoice" onclick="switchBicycle()"
-            name="layerMap" value="bicycleR">
+
+        <input type="radio" id="bicycleChoice" onclick="switchBicycle()" name="layerMap" value="bicycleR">
         <label for="trafficChoice">Bicycle Layer</label>
-    
-        <input type="radio" id="transitChoice" onclick="switchTransit()"
-            name="layerMap" value="transitR">
+
+        <input type="radio" id="transitChoice" onclick="switchTransit()" name="layerMap" value="transitR">
         <label for="transitChoice">Transit Layer</label>
 
-        <input type="radio" id="clearChoice" onclick="switchClear()"
-            name="layerMap" value="clearR">
+        <input type="radio" id="clearChoice" onclick="switchClear()" name="layerMap" value="clearR">
         <label for="clearChoice">Clear Layers</label>
 
 
@@ -72,19 +68,21 @@
         </div>
     </div> -->
     <div style="padding-left: 20px;">
-          <div id="map"></div>
-            <div class="containerLabels">
-                <p id="temp-val">Temp: </p>
-                <p id="humidity">Humidity: </p>
-                <p id="description">Desc: </p>
-                <p id="wind">Wind Speed: </p>
-            </div>
-          
+        <div id="map"></div>
+        <div class="containerLabels">
+            <p id="temp-val">Temp: </p>
+            <p id="humidity">Humidity: </p>
+            <p id="description">Desc: </p>
+            <p id="wind">Wind Speed: </p>
+        </div>
+
         <script async defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDs5RMTZSTPQ7rKuju2izaChBJerfJkDvI&callback=initMap">
             </script>
 
         <!-- <script src="weather.js"></script> -->
+
+        <script src="corona.js"></script>
 
     </div>
 </body>
