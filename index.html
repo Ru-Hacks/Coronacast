@@ -17,19 +17,28 @@
 <link href="style.css" type="text/css" rel="stylesheet">
 
 <body>
+    <div>
 
     <div class="container">
         <h1>Coronacast</h1>
         <!-- <label></label> -->
-        <input type="text" id="cityNameField" name="cityNameField"><br>
-        <!--- input cityname, css is id, name for js -->
-        <!-- <input type="submit" value="poop" name="submitButton"> -->
-        <button class="getWeather" , onclick="getWeatherByCity()">Get Weather</button>
+        <div style= "display: inline-flex; vertical-align: bottom;">
+
+            <div id = "EnterCity" style ="padding: 10px;">
+                <p style = "text-align: center;">Enter City:</p>
+                <input type="text" id="cityNameField"  name="cityNameField">
+            </div>
+
+            <div id = "EnterAge" style ="padding: 10px;">
+                <p style = "text-align: center;">Enter Age:</p>
+                <input type="text" id="cityNameField"  name="cityNameField">
+            </div>
         <!-- <button class="getWeather" id="getWeather">Get Weather</button> -->
+        <button class="getWeather"  onclick="getWeatherByCity()">Get Result</button>
+        </div>
     </div>
 
-
-    <div>
+    <div id = "radioB">
         <input type="radio" id="trafficChoice" onclick="switchTraffic()"
             name="layerMap" value="trafficR">
         <label for="trafficChoice">Traffic Layer</label>
@@ -77,6 +86,12 @@
             </script>
 
         <!-- <script src="weather.js"></script> -->
+
+    </div>
+</div>
+<br>
+    <div>
+        <p id="percent"></p>
 
     </div>
 </body>

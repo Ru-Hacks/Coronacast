@@ -11,22 +11,81 @@ added import*/
 body,html {
 
 
-background-color: #97CAEF ;
+background-color: #EFEFEF ;
 text-align: center;
-height: 100%;
+
 }
+
+#cityNameField{
+
+	width: 200px;
+	height:20px;
+
+}
+
+
+#percent{
+
+font-size: 30px;
+
+		
+}
+
+#mapMain{
+	padding-left: 20px;
+
+}
+
+#radioB{
+
+	font-family: 'Nanum Gothic', sans-serif;
+	font-weight: 400;
+	font-size: 16pt;
+	color: #3d3d3d;
+	text-align: justify;
+	padding-bottom: 20px;
+	padding-left: 20px;
+
+}
+
+.getWeather {
+	background-color: #73AD21; /* Green */
+	border: 2px solid;
+	color: white;
+	height: 80px;
+	width: 150px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 20px;
+	
+}
+
+.getWeather:hover{
+	
+	transition: 0.5s;
+	border: 2px solid #73AD21;
+	background-color:white;
+   color: #73AD21;
+	
+  
+	 
+	 
+ }
 
 #DD, #GPS, #zombie{
 	padding-top: 30px;
 	
 	
 }
+
 #map {
 	float: left;
         height:400px;
         width: 50%;
 	display: inline-block;
 }
+
 .containerLabels {
 	float: left;
 	display: inline-block;
@@ -45,7 +104,7 @@ body {
        margin: 0;
        padding: 0;
         }
-    </style>
+   
 #rcorners2 {
 	
 
@@ -128,10 +187,10 @@ text-decoration: none;
 	
 }
 
-#listOfProj {
-display: inline-flex;
+#Enter {
+
 margin: 0 25px;
-padding-bottom:40px;
+padding-bottom:10px;
 
 	
     
@@ -282,12 +341,12 @@ li a {
 }
 
 h1{
-	
+	font-family: 'Nanum Gothic', sans-serif;
 	text-align: center;
-	font-family: 'Miriam Libre', sans-serif;
+	
 	font-weight: 400;
 	color: black;
-	font-size:35pt;
+	font-size:50pt;
 	
 	
 }
