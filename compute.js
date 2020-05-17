@@ -4,6 +4,10 @@ var humidity ={
 
 
 };
+var wind ={
+
+
+};
 var temp = {
 
 
@@ -18,6 +22,7 @@ var result;
 var percent = 23;
 
 humidity.value = weather.humidity;
+wind.value = weather.wind;
 temp.value = weather.temperature.value;
 
 if(humidity.value< 33)
